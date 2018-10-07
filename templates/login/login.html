@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+
+</head>
+<body>
+<div class="login-page">
+    <form id="login-form" class="form" method="post" action="{% url 'user:login' %}">
+        <input type="text" name="username" placeholder="用户名">
+        <input type="password" name="password" placeholder="密码">
+        <button type="submit" id="login">登　录</button>
+        <div class="msg"><span>还没有账户？</span>
+            <button>创建账户</button>
+        </div>
+        <div class="errmsg"><span>{{ massage }}</span></div>
+    </form>
+    <form id="register-form" class="form" method="post" action="{% url 'user:register' %}">
+        <input type="text" name="username" placeholder="电子邮箱">
+        <input type="password" name="password" placeholder="密码">
+        <button type="submit" id="register">创　建</button>
+        <div class="msg"><span>已有账户？</span>
+            <button>去登录</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $('#login').click(function () {
+            console.log('登录')
+        });
+
+        $('#register').click(function () {
+            console.log('注册')
+        });
+
+        $('.msg button').click(function () {
+            console.log("tt");
+            $('#register-form').toggle(300);
+            $('#login-form').toggle(300);
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

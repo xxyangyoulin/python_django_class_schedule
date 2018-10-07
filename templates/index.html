@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>MD课表</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #4CAF50;
+        }
+
+        #header {
+            padding: 10px 20px 0px 20px;
+            letter-spacing: 1px;
+
+            background-color: #4CAF50;
+            z-index: 1000;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        #big-title {
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        #sub-title {
+            font-size: 14px;
+        }
+
+        #center {
+            width: 100%;
+            position: relative;
+            text-align: center;
+        }
+
+        #center img {
+            max-width: 100%;
+        }
+
+        .download a,
+        .download a:hover,
+        .download a:focus,
+        .download a:link {
+            background-color: white;
+            display: block;
+            color: #4CAF50;
+            border-radius: 50px;
+            border: 1px #4CAF50 solid;
+            position: fixed;
+            letter-spacing: 2px;
+            transform: translateX(-50%);
+            padding: 6px 20px 6px 20px;
+            text-decoration: none;
+            left: 50%;
+            bottom: 30px;
+            font-size: 18px;
+        }
+
+        footer{
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <h1 id="big-title">MD课表</h1>
+    <h2 id="sub-title">『 保持绿色和简单。』</h2>
+</header>
+
+<div id="center">
+    <div class="download">
+        <a href="https://www.coolapk.com/apk/com.mnnyang.gzuclassschedule">立即下载</a>
+    </div>
+
+    <img src="{% static 'image/show1.png' %}">
+    <img src="{% static 'image/show2.png' %}">
+    <img src="{% static 'image/show3.png' %}">
+    <img src="{% static 'image/show4.png' %}">
+    <img src="{% static 'image/show5.png' %}">
+    <img src="{% static 'image/show6.png' %}">
+    <img src="{% static 'image/show7.png' %}">
+    <img src="{% static 'image/show8.png' %}">
+    <img src="{% static 'image/show9.png' %}">
+
+    <footer>
+        <a href="http://md.xxyangyoulin.cn">http://md.xxyangyoulin.cn</a>
+        <br>
+        Github: <a href="https://github.com/mnnyang/ClassSchedule">https://github.com/mnnyang/ClassSchedule</a>
+        <br>
+        Email: xxyangyoulin@gmail.com
+    </footer>
+</div>
+</body>
+</html>
